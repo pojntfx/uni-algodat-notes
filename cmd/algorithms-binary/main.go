@@ -11,7 +11,8 @@ func main() {
 
 	for _, input := range inputs {
 		outputImperative := algorithms.GetAsBinaryImperative(input)
+		outputFunctional := algorithms.GetAsBinaryFunctional(input, "")
 
-		fmt.Printf("dec=%-6v bin_imp=%08v\n", input, outputImperative)
+		fmt.Printf("dec=%-3v bin=%08v=%08v\n", input, outputImperative, outputFunctional)
 	}
 }

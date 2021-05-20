@@ -11,3 +11,11 @@ func GetAsBinaryImperative(num int) string {
 
 	return output
 }
+
+func GetAsBinaryFunctional(num int, output string) string {
+	if num == 0 {
+		return output
+	}
+
+	return GetAsBinaryFunctional(num/2, strconv.Itoa(num%2)+output)
+}
