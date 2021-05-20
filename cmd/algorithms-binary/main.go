@@ -13,6 +13,6 @@ func main() {
 		outputImperative := algorithms.GetAsBinaryImperative(input)
 		outputFunctional := algorithms.GetAsBinaryFunctional(input, "")
 
-		fmt.Printf("dec=%-3v bin=%08v=%08v\n", input, outputImperative, outputFunctional)
+		fmt.Printf("in=%-3v out=%08v=%08v\n", input, outputImperative, outputFunctional)
 	}
 }
