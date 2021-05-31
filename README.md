@@ -2,6 +2,8 @@
 
 Personal notes and snippets for the "Algorithms and Data Structures" course at HdM Stuttgart.
 
+[![pandoc CI](https://github.com/pojntfx/uni-algodat-notes/actions/workflows/pandoc.yaml/badge.svg)](https://github.com/pojntfx/uni-algodat-notes/actions/workflows/pandoc.yaml)
+
 ## Usage
 
 🚧 This project is a work-in-progress! Instructions will be added as soon as it is usable. 🚧
