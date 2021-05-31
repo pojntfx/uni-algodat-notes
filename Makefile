@@ -5,7 +5,7 @@ docs:
 	mkdir -p out/docs
 	for document in docs/*.md; do\
 		echo "Compiling $${document} ..." ;\
-    	docker run -v "$${PWD}:/data:z" pandoc/latex "$${document}" -o "out/$${document}.pdf";\
+    	docker run -v "$(PWD):/data:z" pandoc/latex "$${document}" -o "out/$${document}.pdf";\
 	done
 
 build: docs
