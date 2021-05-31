@@ -12,7 +12,7 @@ build: docs
 
 dev:
 	while [ -z "$${MAKE_PID}" ] || [ -n "$$(inotifywait -q -r -e modify docs/*.md)" ]; do\
-		$(MAKE) & export MAKE_PID="$$!";\
+		$(MAKE) PWD=$(PWD) & export MAKE_PID="$$!";\
 	done
 
 clean:
