@@ -1,0 +1,72 @@
+<h1 id="uni-algodat-notes">Uni Algodat Notes</h1>
+<h2 id="themen">Themen</h2>
+<ul>
+<li>Einleitung
+<ul>
+<li>Zyklus der Informationsverarbeitung</li>
+<li>Grundbegriffe zu Algodat</li>
+<li>Eigenschaften von Algorithmen</li>
+</ul></li>
+<li>Zeitkomplexität
+<ul>
+<li>Problemgröße des Inputs</li>
+<li>Schrittzahlfunktionen</li>
+<li>Testfunktionen</li>
+<li>Best Case &amp; Worst Case</li>
+<li>Beispiele
+<ul>
+<li>Suche im Binärbaum</li>
+<li>Fibonacci-Sequenz</li>
+<li>Bubble-Sort</li>
+</ul></li>
+</ul></li>
+<li>Applikative Algorithmen
+<ul>
+<li>Definition Algorithmus</li>
+<li>Schritte des Auswertung</li>
+<li>Rekursion</li>
+</ul></li>
+<li>Imperative Algorithmen
+<ul>
+<li>Zustandsautomat</li>
+<li>Seiteneffekt</li>
+<li>Queries</li>
+<li>Operations</li>
+<li>Schritte der Auswertung</li>
+<li>Sequenz</li>
+<li>Selektion</li>
+<li>Iteration</li>
+<li>Church’sche These</li>
+<li>Beispiele
+<ul>
+<li>Fakultät</li>
+</ul></li>
+</ul></li>
+<li>Sortieralgorithmen
+<ul>
+<li>Merge-Sort
+<ul>
+<li>Zeitkomplexität</li>
+</ul></li>
+<li>Quicksort
+<ul>
+<li>Pivot-Element</li>
+<li>Zeitkomplexität</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="paradigm-conversion">Paradigm Conversion</h2>
+<p>I’m too stupid to write proper functional code, so most of the times I “convert” my imperative solutions to functional ones using the following schema I found on the web:</p>
+<ol type="1">
+<li>Isolate the loop in its own function. Make sure that all captured variables (i.e., variables that are used in the loop, but not declared in the loop) are passed in as parameters.</li>
+<li>If the loop declares its own counter (e.g., in a for-loop), remove that declaration and make the loop counter another parameter.</li>
+<li>Replace the loop construct itself:
+<ol type="1">
+<li>Replace the loop condition check with an if statement (or if expression, if that’s what your language has).</li>
+<li>In the failure branch, return.</li>
+<li>Move the rest of the loop code into the success branch.</li>
+<li>At the end of the success branch, add a recursive call which passes the modified values of the loop counter and all captured variables; this is equivalent to the jump back to the top of the original loop.</li>
+</ol></li>
+<li>At the original site of the loop, put in a call to your new recursive function. This is where you’ll now provide the initial value of the loop counter.</li>
+<li>Perform whatever other optimizations seem obvious, as the code at this point will be functional, but probably ugly, probably inefficient, and probably unidiomatic.</li>
+</ol>
