@@ -1,8 +1,8 @@
 package algorithms
 
-func SequentialSearchImperative(input []int, target int) int {
-	for i, candidate := range input {
-		if candidate == target {
+func SequentialSearchImperative(haystack []int, needle int) int {
+	for i, candidate := range haystack {
+		if candidate == needle {
 			return i
 		}
 	}
@@ -10,14 +10,14 @@ func SequentialSearchImperative(input []int, target int) int {
 	return -1
 }
 
-func SequentialSearchFunctional(input []int, target int, i int) int {
-	if i == len(input)-1 {
+func SequentialSearchFunctional(haystack []int, needle int, i int) int {
+	if i == len(haystack)-1 {
 		return -1
 	}
 
-	if input[i] == target {
+	if haystack[i] == needle {
 		return i
 	}
 
-	return SequentialSearchFunctional(input, target, i+1)
+	return SequentialSearchFunctional(haystack, needle, i+1)
 }
