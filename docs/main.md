@@ -42,6 +42,23 @@
   - Quicksort
     - Pivot-Element
     - Zeitkomplexität
+- Grammatiken
+  - Symbole
+  - Produktionsregeln
+  - Terminale und Non-Terminale
+    - Lexene
+      - Identifier
+      - Literale
+    - Token
+      - Operatoren
+      - Keywords
+  - Techniken beim Compiler-Vorgang
+    - Scanning
+    - Parsing
+    - Interpreter/Compiler
+      - Scanner (lexikalische Analyse)
+      - Parser (syntaktische Analyse)
+    - Startsymbole
 
 ## Paradigm Conversion
 
