@@ -1,7 +1,6 @@
 package algorithms
 
 import (
-	"log"
 	"strconv"
 	"strings"
 )
@@ -26,8 +25,6 @@ func TermEvaluateImperative(term string) int {
 			parts = append(parts, lastNum)
 		}
 	}
-
-	log.Println(parts)
 
 	res := 0
 	lastInstruction := "+"
