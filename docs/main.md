@@ -59,6 +59,11 @@
       - Scanner (lexikalische Analyse)
       - Parser (syntaktische Analyse)
     - Startsymbole
+- Abstrakte Datentypen
+  - ADT
+  - Stacks
+  - Queues
+  - Binärbäume
 
 ## Paradigm Conversion
 
