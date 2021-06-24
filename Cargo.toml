@@ -11,3 +11,7 @@ edition = "2018"
 [[bin]]
 name="algorithms-binary-search"
 path="cmd/algorithms-binary-search/main.rs"
+
+[[bin]]
+name="algorithms-binary"
+path="cmd/algorithms-binary/main.rs"
