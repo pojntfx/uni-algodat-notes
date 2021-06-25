@@ -24,46 +24,27 @@
   - Definition Algorithmus
   - Schritte des Auswertung
   - Rekursion
-- Imperative Algorithmen
-  - Zustandsautomat
-  - Seiteneffekt
-  - Queries
-  - Operations
-  - Schritte der Auswertung
-  - Sequenz
-  - Selektion
-  - Iteration
-  - Church'sche These
-  - Beispiele
-    - Fakultät
 - Sortieralgorithmen
   - Merge-Sort
     - Zeitkomplexität
   - Quicksort
     - Pivot-Element
     - Zeitkomplexität
-- Grammatiken
-  - Symbole
-  - Produktionsregeln
-  - Terminale und Non-Terminale
-    - Lexene
-      - Identifier
-      - Literale
-    - Token
-      - Operatoren
-      - Keywords
-  - Techniken beim Compiler-Vorgang
-    - Scanning
-    - Parsing
-    - Interpreter/Compiler
-      - Scanner (lexikalische Analyse)
-      - Parser (syntaktische Analyse)
-    - Startsymbole
 - Abstrakte Datentypen
   - ADT
   - Stacks
   - Queues
   - Binärbäume
+- Binäre Bäume
+  - Implementation BinaryTree
+  - Suchbäume
+    - Definition
+    - Zeitkomplexität
+- AVL-Bäume
+  - Definition
+  - Balancing
+  - Doppelte Relation
+  - Zeitkomplexität
 
 ## Paradigm Conversion
 
