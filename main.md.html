@@ -162,6 +162,18 @@
 <li><a href="#paradigm-conversion">Paradigm Conversion</a></li>
 <li><a href="#begriffe">Begriffe</a></li>
 <li><a href="#eigenschaften-von-algorithmen">Eigenschaften von Algorithmen</a></li>
+<li><a href="#zeitkomplexität">Zeitkomplexität</a>
+<ul>
+<li><a href="#wichtige-wachstumsfunktionen">Wichtige Wachstumsfunktionen</a></li>
+<li><a href="#sortieralgorithmen">Sortieralgorithmen</a></li>
+</ul></li>
+<li><a href="#adts">ADTs</a>
+<ul>
+<li><a href="#übersicht">Übersicht</a></li>
+<li><a href="#stack">Stack</a></li>
+<li><a href="#queue">Queue</a></li>
+<li><a href="#binärbaum">Binärbaum</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -258,6 +270,104 @@
 <li><strong>Determinierter Ablauf</strong>: Führt bei selber (erlaubter) Eingabe immer die Schritte in derselben Reihenfolge aus</li>
 <li><strong>Deterministisch</strong>: Determiniertes Ergebnis &amp; determinierter Ablauf</li>
 <li><strong>Zeitkomplexität</strong>: Wachstumsverhalten der benötigten Anzahl von Schritten, wenn Problemgröße gegen unendlich strebt</li>
+</ul>
+<h2 id="zeitkomplexität">Zeitkomplexität</h2>
+<ol type="1">
+<li>Ausgangspunkt: Algorithmus <span class="math inline"><em>A</em></span></li>
+<li>Finde ein Maß für die Problemgröße des Inputs
+<ul>
+<li><strong>Sortieren einer Liste</strong>: <span class="math inline"><em>N</em> = <em>A</em><em>n</em><em>z</em><em>a</em><em>h</em><em>l</em> <em>E</em><em>l</em><em>e</em><em>m</em><em>e</em><em>n</em><em>t</em><em>e</em> <em>d</em><em>e</em><em>r</em> <em>L</em><em>i</em><em>s</em><em>t</em><em>e</em></span></li>
+<li><strong>Bäume</strong>: <span class="math inline"><em>N</em> = <em>A</em><em>n</em><em>z</em><em>a</em><em>h</em><em>l</em> <em>K</em><em>n</em><em>o</em><em>t</em><em>e</em><em>n</em></span></li>
+<li><strong>Textsuche</strong>: <span class="math inline"><em>N</em> = <em>A</em><em>n</em><em>z</em><em>a</em><em>h</em><em>l</em> <em>Z</em><em>e</em><em>i</em><em>c</em><em>h</em><em>e</em><em>n</em> <em>i</em><em>m</em> <em>T</em><em>e</em><em>x</em><em>t</em></span></li>
+</ul></li>
+<li>Finde die Anzahl der signifikanten Schritte von <span class="math inline"><em>A</em></span> bei Problemgröße <span class="math inline"><em>N</em></span>.</li>
+<li>Bestimme das Wachstumsverhalten der Funktion für <span class="math inline"><em>N</em> → ∞</span></li>
+<li>Vergleiche Funktion mit <span class="math inline"><em>t</em>(<em>N</em>)</span> und finde <em>richtiges</em> Wachstumsverhalten.</li>
+</ol>
+<h3 id="wichtige-wachstumsfunktionen">Wichtige Wachstumsfunktionen</h3>
+<ul>
+<li><strong>Bäume</strong>: <span class="math inline"><em>O</em>(<em>l</em><em>o</em><em>g</em>(<em>n</em>))</span></li>
+<li><strong>Binary Search</strong>: <span class="math inline"><em>O</em>(<em>l</em><em>o</em><em>g</em>(<em>n</em>))</span></li>
+<li><strong>Merge Sort</strong>: <span class="math inline"><em>O</em>(<em>l</em><em>o</em><em>g</em>(<em>n</em>))</span> (Out-of-Place)</li>
+<li><strong>Quicksort</strong>: <span class="math inline"><em>O</em>(<em>l</em><em>o</em><em>g</em>(<em>n</em>))</span> (In-Place)</li>
+<li><strong>Bubble Sort</strong>: <span class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span></li>
+</ul>
+<h3 id="sortieralgorithmen">Sortieralgorithmen</h3>
+<ul>
+<li><strong>In-Place</strong>: Es wird (nahezu) kein weiterer Speicher bei der Ausführung gebraucht (i.e. Quicksort)</li>
+<li><strong>Out-of-Place</strong>: Es wird zusätzlicher Speicher bei der Ausführung gebraucht (i.e. Merge Sort)</li>
+</ul>
+<h2 id="adts">ADTs</h2>
+<h3 id="übersicht">Übersicht</h3>
+<ul>
+<li>Abstrakte Datentypen als Vorläufer der Klassen in OOP</li>
+<li>ADT: Mehrfach instanziierbares Software-Modul</li>
+<li>Jede Instanz hat ein Interface</li>
+<li>Syntax für Operatoren: <code>&lt;op_name&gt;: &lt;arg1&gt; [x arg2...] → &lt;return_type&gt;</code></li>
+</ul>
+<h3 id="stack">Stack</h3>
+<ul>
+<li><p><strong>type</strong> <span class="math inline"><em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>)</span></p></li>
+<li><p><strong>sorts</strong>: <span class="math inline"><em>T</em>, <em>b</em><em>o</em><em>o</em><em>l</em></span></p></li>
+<li><p><strong>operations</strong></p>
+<ul>
+<li><strong>new</strong>: <span class="math inline"><em>ø</em> → <em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>)</span></li>
+<li><strong>push</strong>: <span class="math inline"><em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>)<em>x</em><em>T</em> → <em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>)</span></li>
+<li><strong>pop</strong>: <span class="math inline"><em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>) → <em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>)</span></li>
+<li><strong>top</strong>: <span class="math inline"><em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>) → <em>T</em></span></li>
+<li><strong>empty</strong>: <span class="math inline"><em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>) → <em>b</em><em>o</em><em>o</em><em>l</em></span></li>
+</ul></li>
+<li><p><strong>axioms</strong></p>
+<ul>
+<li><span class="math inline"><em>p</em><em>o</em><em>p</em>(<em>p</em><em>u</em><em>s</em><em>h</em>(<em>s</em>,<em>t</em>)) = <em>s</em></span></li>
+<li><span class="math inline"><em>t</em><em>o</em><em>p</em>(<em>p</em><em>u</em><em>s</em><em>h</em>(<em>s</em>,<em>t</em>)) = <em>t</em></span></li>
+<li><span class="math inline"><em>e</em><em>m</em><em>p</em><em>t</em><em>y</em>(<em>n</em><em>e</em><em>w</em>(())) = <em>t</em><em>r</em><em>u</em><em>e</em></span></li>
+<li><span class="math inline"><em>e</em><em>m</em><em>p</em><em>t</em><em>y</em>(<em>p</em><em>u</em><em>s</em><em>h</em>(<em>s</em>,<em>t</em>)) = <em>f</em><em>a</em><em>l</em><em>s</em><em>e</em></span></li>
+</ul></li>
+</ul>
+<h3 id="queue">Queue</h3>
+<ul>
+<li><strong>type</strong> <span class="math inline"><em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>sorts</strong> <span class="math inline"><em>T</em>, <em>b</em><em>o</em><em>o</em><em>l</em></span></li>
+<li><strong>operations</strong>
+<ul>
+<li><strong>new</strong>: <span class="math inline"><em>ø</em> → <em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>enter</strong>: <span class="math inline"><em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>)<em>x</em><em>T</em> → <em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>leave</strong>: <span class="math inline"><em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>) → <em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>head</strong>: <span class="math inline"><em>Q</em><em>u</em><em>e</em><em>u</em><em>e</em>(<em>T</em>) → <em>T</em></span></li>
+<li><strong>empty</strong>: <span class="math inline"><em>S</em><em>t</em><em>a</em><em>c</em><em>k</em>(<em>T</em>) → <em>b</em><em>o</em><em>o</em><em>l</em></span></li>
+</ul></li>
+<li><strong>axioms</strong>
+<ul>
+<li><span class="math inline"><em>e</em><em>m</em><em>p</em><em>t</em><em>y</em>(<em>n</em><em>e</em><em>w</em>()) = <em>t</em><em>r</em><em>u</em><em>e</em></span></li>
+<li><span class="math inline"><em>h</em><em>e</em><em>a</em><em>d</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>n</em><em>e</em><em>w</em>(),<em>t</em>)) = <em>t</em></span></li>
+<li><span class="math inline"><em>l</em><em>e</em><em>a</em><em>v</em><em>e</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>n</em><em>e</em><em>w</em>(),<em>t</em>)) = <em>n</em><em>e</em><em>w</em>()</span></li>
+<li><span class="math inline"><em>l</em><em>e</em><em>a</em><em>v</em><em>e</em>(<em>n</em><em>e</em><em>w</em>()) = <em>n</em><em>e</em><em>w</em>()</span></li>
+<li><span class="math inline"><em>h</em><em>e</em><em>a</em><em>d</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>q</em>,<em>s</em>),<em>t</em>)) = <em>h</em><em>e</em><em>a</em><em>d</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>q</em>,<em>s</em>))</span></li>
+<li><span class="math inline"><em>l</em><em>e</em><em>a</em><em>v</em><em>e</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>q</em>,<em>s</em>),<em>t</em>)) = <em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>l</em><em>e</em><em>a</em><em>v</em><em>e</em>(<em>e</em><em>n</em><em>t</em><em>e</em><em>r</em>(<em>q</em>,<em>s</em>)),<em>t</em>)</span></li>
+</ul></li>
+</ul>
+<h3 id="binärbaum">Binärbaum</h3>
+<ul>
+<li><strong>type</strong> <span class="math inline"><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>sort</strong> <span class="math inline"><em>T</em>, <em>b</em><em>o</em><em>o</em><em>l</em></span></li>
+<li><strong>operations</strong>
+<ul>
+<li><strong>new</strong>: <span class="math inline"><em>ø</em> → <em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>bin</strong>: <span class="math inline"><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>)<em>x</em><em>T</em><em>x</em><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>) → <em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>left</strong>: <span class="math inline"><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>) → <em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>right</strong>: <span class="math inline"><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>) → <em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>)</span></li>
+<li><strong>root</strong>: <span class="math inline"><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>) → <em>T</em></span></li>
+<li><strong>empty</strong>: <span class="math inline"><em>B</em><em>i</em><em>n</em><em>T</em><em>r</em><em>e</em><em>e</em>(<em>T</em>) → <em>b</em><em>o</em><em>o</em><em>l</em></span></li>
+</ul></li>
+<li><strong>axioms</strong>
+<ul>
+<li><span class="math inline"><em>l</em><em>e</em><em>f</em><em>t</em>(<em>b</em><em>i</em><em>n</em>(<em>x</em>,<em>t</em>,<em>y</em>)) = <em>x</em></span></li>
+<li><span class="math inline"><em>r</em><em>i</em><em>g</em><em>h</em><em>t</em>(<em>b</em><em>i</em><em>n</em>(<em>x</em>,<em>t</em>,<em>y</em>)) = <em>y</em></span></li>
+<li><span class="math inline"><em>r</em><em>o</em><em>o</em><em>t</em>(<em>b</em><em>i</em><em>n</em>(<em>x</em>,<em>t</em>,<em>y</em>)) = <em>t</em></span></li>
+<li><span class="math inline"><em>e</em><em>m</em><em>p</em><em>t</em><em>y</em>(<em>n</em><em>e</em><em>w</em>()) = <em>t</em><em>r</em><em>u</em><em>e</em></span></li>
+<li><span class="math inline"><em>e</em><em>m</em><em>p</em><em>t</em><em>y</em>(<em>b</em><em>i</em><em>n</em>(<em>x</em>,<em>t</em>,<em>y</em>))) = <em>f</em><em>a</em><em>l</em><em>s</em><em>e</em></span></li>
+</ul></li>
 </ul>
 </body>
 </html>
