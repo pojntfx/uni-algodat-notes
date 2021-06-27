@@ -34,6 +34,6 @@ func TrimWhitespaceFunctional(input string, output string, i int) string {
 	return TrimWhitespaceFunctional(input, output, i+1)
 }
 
-func isWhitespace(in string) bool {
-	return strings.TrimSpace(in) == ""
+func isWhitespace(input string) bool {
+	return strings.TrimSpace(input) == ""
 }
