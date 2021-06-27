@@ -1,19 +1,17 @@
-use std::convert::TryInto;
-
-pub fn trim_whitespace_imperative(input: String) -> String {
+pub fn trim_whitespace_imperative(input: &str) -> String {
     let mut output = String::new();
 
-    input.split("").for_each(|character| {
+    input.chars().for_each(|character| {
         if !is_whitespace(character) {
-            output += character
+            output.push(character)
         }
     });
 
     return output;
 }
 
-pub fn trim_whitespace_functional(input: String, output: String, i: i32) -> String {
-    if i >= input.len().try_into().unwrap() {
+pub fn trim_whitespace_functional(input: &str, output: String, i: usize) -> String {
+    if i >= input.len() {
         return output;
     }
 
@@ -21,15 +19,15 @@ pub fn trim_whitespace_functional(input: String, output: String, i: i32) -> Stri
         To make this fully side-effect free, replace all references
         to the following with these expressions
     */
-    let curr = input.chars().nth(i.try_into().unwrap()).unwrap();
+    let curr = input.chars().nth(i).unwrap();
 
-    if !is_whitespace(&curr.to_string()) {
+    if !is_whitespace(curr) {
         return trim_whitespace_functional(input, output + &curr.to_string(), i + 1);
     }
 
     return trim_whitespace_functional(input, output, i + 1);
 }
 
-fn is_whitespace(input: &str) -> bool {
-    input.contains(char::is_whitespace)
+fn is_whitespace(input: char) -> bool {
+    return input.is_whitespace();
 }

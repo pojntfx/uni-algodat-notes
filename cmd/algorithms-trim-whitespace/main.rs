@@ -12,9 +12,9 @@ asdf",
     ];
 
     inputs.iter().for_each(|input| {
-        let output_imperative = trim_whitespace::trim_whitespace_imperative((*input).to_string());
+        let output_imperative = trim_whitespace::trim_whitespace_imperative(input);
         let output_functional =
-            trim_whitespace::trim_whitespace_functional((*input).to_string(), String::new(), 0);
+            trim_whitespace::trim_whitespace_functional(input, String::new(), 0);
 
         println!(
             "in=\"{}\" out=\"{}\"=\"{}\"",
