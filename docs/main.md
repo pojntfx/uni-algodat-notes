@@ -74,3 +74,89 @@ I'm too stupid to write proper functional code, so most of the times I "convert"
 - **Determinierter Ablauf**: Führt bei selber (erlaubter) Eingabe immer die Schritte in derselben Reihenfolge aus
 - **Deterministisch**: Determiniertes Ergebnis & determinierter Ablauf
 - **Zeitkomplexität**: Wachstumsverhalten der benötigten Anzahl von Schritten, wenn Problemgröße gegen unendlich strebt
+
+## Zeitkomplexität
+
+1. Ausgangspunkt: Algorithmus $A$
+2. Finde ein Maß für die Problemgröße des Inputs
+   - **Sortieren einer Liste**: $N = Anzahl\ Elemente\ der\ Liste$
+   - **Bäume**: $N = Anzahl\ Knoten$
+   - **Textsuche**: $N = Anzahl\ Zeichen\ im\ Text$
+3. Finde die Anzahl der signifikanten Schritte von $A$ bei Problemgröße $N$.
+4. Bestimme das Wachstumsverhalten der Funktion für $N→∞$
+5. Vergleiche Funktion mit $t(N)$ und finde _richtiges_ Wachstumsverhalten.
+
+### Wichtige Wachstumsfunktionen
+
+- **Bäume**: $O(log(n))$
+- **Binary Search**: $O(log(n))$
+- **Merge Sort**: $O(log(n))$ (Out-of-Place)
+- **Quicksort**: $O(log(n))$ (In-Place)
+- **Bubble Sort**: $O(n^2)$
+
+### Sortieralgorithmen
+
+- **In-Place**: Es wird (nahezu) kein weiterer Speicher bei der Ausführung gebraucht (i.e. Quicksort)
+- **Out-of-Place**: Es wird zusätzlicher Speicher bei der Ausführung gebraucht (i.e. Merge Sort)
+
+## ADTs
+
+### Übersicht
+
+- Abstrakte Datentypen als Vorläufer der Klassen in OOP
+- ADT: Mehrfach instanziierbares Software-Modul
+- Jede Instanz hat ein Interface
+- Syntax für Operatoren: `<op_name>: <arg1> [x arg2...] → <return_type>`
+
+### Stack
+
+- **type** $Stack(T)$
+- **sorts**: $T, bool$
+- **operations**
+  - **new**: $ø → Stack(T)$
+  - **push**: $Stack(T) x T → Stack(T)$
+  - **pop**: $Stack(T) → Stack(T)$
+  - **top**: $Stack(T) → T$
+  - **empty**: $Stack(T) → bool$
+- **axioms**
+
+  - $pop(push(s, t)) = s$
+  - $top(push(s, t)) = t$
+  - $empty(new(())) = true$
+  - $empty(push(s, t)) = false$
+
+### Queue
+
+- **type** $Queue(T)$
+- **sorts** $T, bool$
+- **operations**
+  - **new**: $ø → Queue(T)$
+  - **enter**: $Queue(T) x T → Queue(T)$
+  - **leave**: $Queue(T) → Queue(T)$
+  - **head**: $Queue(T) → T$
+  - **empty**: $Stack(T) → bool$
+- **axioms**
+  - $empty(new())=true$
+  - $head(enter(new(), t))=t$
+  - $leave(enter(new(), t))=new()$
+  - $leave(new()) = new()$
+  - $head(enter(enter(q,s), t)) = head(enter(q,s))$
+  - $leave(enter(enter(q,s), t)) = enter(leave(enter(q,s)), t)$
+
+### Binärbaum
+
+- **type** $BinTree(T)$
+- **sort** $T, bool$
+- **operations**
+  - **new**: $ø → BinTree(T)$
+  - **bin**: $BinTree(T)xTxBinTree(T) → BinTree(T)$
+  - **left**: $BinTree(T) → BinTree(T)$
+  - **right**: $BinTree(T) → BinTree(T)$
+  - **root**: $BinTree(T) → T$
+  - **empty**: $BinTree(T) → bool$
+- **axioms**
+  - $left(bin(x,t,y))=x$
+  - $right(bin(x,t,y))=y$
+  - $root(bin(x,t,y))=t$
+  - $empty(new())=true$
+  - $empty(bin(x,t,y)))=false$
