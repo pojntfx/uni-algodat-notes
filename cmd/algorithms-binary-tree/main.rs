@@ -12,5 +12,9 @@ fn main() {
     n1.insert(19);
     n1.insert(16);
 
-    dbg!(n1);
+    n1 = dbg!(n1);
+
+    dbg!(n1.contains(5));
+    dbg!(n1.contains(6));
+    dbg!(n1.contains(19));
 }
