@@ -15,13 +15,11 @@ impl<T: Ord> Node<T> {
         }
     }
 
-    pub fn bin(&mut self, left: Option<Node<T>>, right: Option<Node<T>>) {
-        if left.is_some() {
-            self.left = Box::new(left);
-        }
+    pub fn insert_left(&mut self, value: Option<Node<T>>) {
+        self.left = Box::new(value);
+    }
 
-        if right.is_some() {
-            self.right = Box::new(right);
-        }
+    pub fn insert_right(&mut self, value: Option<Node<T>>) {
+        self.right = Box::new(value);
     }
 }

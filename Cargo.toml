@@ -21,6 +21,9 @@ name="algorithms-trim-whitespace"
 path="cmd/algorithms-trim-whitespace/main.rs"
 
 [[bin]]
-name="algorithms-trees"
-path="cmd/algorithms-trees/main.rs"
+name="algorithms-tree"
+path="cmd/algorithms-tree/main.rs"
 
+[[bin]]
+name="algorithms-binary-tree"
+path="cmd/algorithms-binary-tree/main.rs"
