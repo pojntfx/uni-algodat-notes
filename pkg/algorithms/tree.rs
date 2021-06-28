@@ -15,11 +15,11 @@ impl<T: Ord> Node<T> {
         }
     }
 
-    pub fn insert_left(&mut self, value: Option<Node<T>>) {
-        self.left = Box::new(value);
+    pub fn insert_left(&mut self, value: Node<T>) {
+        self.left = Box::new(Some(value));
     }
 
-    pub fn insert_right(&mut self, value: Option<Node<T>>) {
-        self.right = Box::new(value);
+    pub fn insert_right(&mut self, value: Node<T>) {
+        self.right = Box::new(Some(value));
     }
 }

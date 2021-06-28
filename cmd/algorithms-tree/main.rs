@@ -10,9 +10,10 @@ fn main() {
     let n4 = Node::new(13);
     let n5 = Node::new(14);
 
-    n1.bin(None, Some(n5));
-    n2.bin(Some(n4), None);
-    n1.bin(Some(n2), Some(n3));
+    n1.insert_right(n5);
+    n2.insert_left(n4);
+    n1.insert_left(n2);
+    n1.insert_right(n3);
 
     dbg!(n1);
 }
