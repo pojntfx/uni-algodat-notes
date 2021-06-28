@@ -1,7 +1,7 @@
-#[path = "../../pkg/algorithms/trees.rs"]
-mod trees;
+#[path = "../../pkg/algorithms/tree.rs"]
+mod tree;
 
-use trees::Node;
+use tree::Node;
 
 fn main() {
     let mut n1 = Node::new(10);
