@@ -4,17 +4,21 @@ mod binary_tree;
 use binary_tree::Node;
 
 fn main() {
-    let mut n1 = Node::new(15);
+    let mut root = Node::new(15);
 
-    n1.insert(11);
-    n1.insert(24);
-    n1.insert(5);
-    n1.insert(19);
-    n1.insert(16);
+    root.insert(11);
+    root.insert(24);
+    root.insert(5);
+    root.insert(19);
+    root.insert(16);
 
-    n1 = dbg!(n1);
+    root = dbg!(root);
 
-    dbg!(n1.contains(5));
-    dbg!(n1.contains(6));
-    dbg!(n1.contains(19));
+    dbg!(root.contains(5));
+    dbg!(root.contains(6));
+    dbg!(root.contains(19));
+
+    let root2 = Node::delete(Box::new(root), &11);
+
+    dbg!(root2);
 }
