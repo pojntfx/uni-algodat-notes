@@ -67,25 +67,24 @@ impl<T: Ord> Node<T> {
         return self.right.as_mut().as_mut().unwrap().contains(value);
     }
 
-    // See https://stackoverflow.com/questions/64043682/how-to-write-a-delete-function-for-a-binary-tree-in-rust
-    pub fn delete(mut this: Box<Node<T>>, target: &T) -> Option<Box<Node<T>>> {
-        if target < &this.value {
-            if let Some(left) = this.left.take() {
-                this.left = Self::delete(left, target);
+    pub fn delete(mut self, value: T) -> Option<Box<Node<T>>> {
+        if value < self.value {
+            if let Some(left) = self.left.take() {
+                self.left = left.delete(value);
             }
-            return Some(this);
+
+            return Some(Box::new(self));
         }
 
-        if target > &this.value {
-            if let Some(right) = this.right.take() {
-                this.right = Self::delete(right, target);
+        if value > self.value {
+            if let Some(right) = self.right.take() {
+                self.right = right.delete(value);
             }
-            return Some(this);
+
+            return Some(Box::new(self));
         }
 
-        assert!(target == &this.value, "Faulty Ord implementation for T");
-
-        match (this.left.take(), this.right.take()) {
+        match (self.left.take(), self.right.take()) {
             (None, None) => None,
             (Some(left), None) => Some(left),
             (None, Some(right)) => Some(right),
@@ -102,7 +101,6 @@ impl<T: Ord> Node<T> {
         }
     }
 
-    //  Returns the rightmost child, unless the node itself is that child.
     pub fn rightmost_child(&mut self) -> Option<Box<Node<T>>> {
         match self.right {
             Some(ref mut right) => {

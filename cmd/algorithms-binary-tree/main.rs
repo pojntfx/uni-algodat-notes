@@ -18,7 +18,7 @@ fn main() {
     dbg!(root.contains(6));
     dbg!(root.contains(19));
 
-    let root2 = Node::delete(Box::new(root), &11);
+    let root2 = root.delete(11);
 
     dbg!(root2);
 }
