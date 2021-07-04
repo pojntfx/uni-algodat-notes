@@ -26,7 +26,13 @@ const getRSAKeysImperative = (p, q) => {
   return [n, e, d];
 };
 
-const rsaEncrypt = (m, e, n) => Math.pow(m, e) % n;
+const rsaEncrypt = (m, e, n) => {
+  if (m > n) {
+    throw new Error("keyspace to short");
+  }
+
+  return Math.pow(m, e) % n;
+};
 
 const rsaDecrypt = (c, d, n) => Math.pow(c, d) % n;
 

@@ -1,6 +1,7 @@
 package algorithms
 
 import (
+	"errors"
 	"math"
 )
 
@@ -32,8 +33,12 @@ func GetRSAKeysImperative(p int, q int) []int {
 	return []int{n, e, d}
 }
 
-func RSAEncrypt(m int, e int, n int) int {
-	return int(math.Pow(float64(m), float64(e))) % n
+func RSAEncrypt(m int, e int, n int) (int, error) {
+	if m > n {
+		return -1, errors.New("keyspace to short")
+	}
+
+	return int(math.Pow(float64(m), float64(e))) % n, nil
 }
 
 func RSADecrypt(c int, d int, n int) int {
