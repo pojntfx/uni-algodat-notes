@@ -5,6 +5,31 @@
 
 # Uni Algodat Notes
 
+## Introduction
+
+### Contributing
+
+These study materials are heavily based on [professor Toenniessen's "Algorithmen und Datenstrukturen" lecture at HdM Stuttgart](https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5212224).
+
+**Found an error or have a suggestion?** Please open an issue on GitHub ([github.com/pojntfx/uni-algodat-notes](https://github.com/pojntfx/uni-algodat-notes)):
+
+![QR code to source repository](./static/qr.png){ width=150px }
+
+If you like the study materials, a GitHub star is always appreciated :)
+
+### License
+
+![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px }
+
+Uni Algodat Notes (c) 2021 Felicitas Pojtinger and contributors
+
+SPDX-License-Identifier: AGPL-3.0
+\newpage
+
+## Cheatsheet
+
+I created a hand-written cheatsheet which contains the most important points; you can print it (use a printer with at least 2400 DPI) for use in the exam: [Cheatsheet](./static/cheatsheet.pdf)
+
 ## Themen
 
 - Einleitung
