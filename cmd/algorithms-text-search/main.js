@@ -1,9 +1,12 @@
-const { primes } = require("../../pkg/algorithms/primes");
+const { search } = require("../../pkg/algorithms/text_search");
 
-const inputs = [1, 4, 15, 20];
+const inputs = [
+  ["Hello, world!", "orl"],
+  ["Hello, world!", "asdf"],
+];
 
 inputs.forEach((input) => {
-  const output = primes(input, []);
+  const output = search(input[0], input[1], 0);
 
   console.log(`in=${input} out=${output}`);
 });
