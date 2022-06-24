@@ -1,6 +1,0 @@
-Uni Algodat Notes
-Personal notes and snippets for the Algorithms and Data Structures course at HdM Stuttgart.
-© 2021 Felicitas Pojtinger under AGPL-3.0
-https://github.com/pojntfx/uni-algodat-notes
-https://github.com/pojntfx/uni-algodat-notes/releases/latest/download/all.zip
-➕ Happy optimizing!

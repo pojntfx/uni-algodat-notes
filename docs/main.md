@@ -135,7 +135,7 @@ I'm too stupid to write proper functional code, so most of the times I "convert"
 - Abstrakte Datentypen als Vorläufer der Klassen in OOP
 - ADT: Mehrfach instanziierbares Software-Modul
 - Jede Instanz hat ein Interface
-- Syntax für Operatoren: `<op_name>: <arg1> [x arg2...] → <return_type>`
+- Syntax für Operatoren: `<op_name>: <arg1> [x arg2...] -> <return_type>`
 
 ### Stack
 
