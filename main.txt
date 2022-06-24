@@ -1,5 +1,5 @@
 Uni Algodat Notes
-Felix Pojtinger
+Felicitas Pojtinger
 2022-02-01
 
 -   1 Introduction
@@ -37,7 +37,7 @@ License
 
 [AGPL-3.0 license badge]
 
-Uni Algodat Notes (c) 2021 Felix Pojtinger and contributors
+Uni Algodat Notes (c) 2021 Felicitas Pojtinger and contributors
 
 SPDX-License-Identifier: AGPL-3.0
 
