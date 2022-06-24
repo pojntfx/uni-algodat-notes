@@ -1,7 +1,11 @@
-% Uni Algodat Notes
-% Felicitas Pojtinger
-% \today
-\tableofcontents
+---
+author: [Felicitas Pojtinger]
+date: "2022-02-01"
+subject: "Uni Algodat Notes"
+keywords: [algorithms, time-complexity, hdm-stuttgart]
+subtitle: "Notes for the Algodat (algorithms and data structures) course at HdM Stuttgart"
+lang: "de"
+---
 
 # Uni Algodat Notes
 
