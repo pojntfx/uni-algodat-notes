@@ -190,10 +190,10 @@ Stack
 
 -   axioms
 
-    -   pop(push(s, t)) = s
-    -   top(push(s, t)) = t
+    -   pop(push(s,t)) = s
+    -   top(push(s,t)) = t
     -   empty(new(())) = true
-    -   empty(push(s, t)) = false
+    -   empty(push(s,t)) = false
 
 Queue
 
@@ -207,11 +207,11 @@ Queue
     -   empty: Stack(T) → bool
 -   axioms
     -   empty(new()) = true
-    -   head(enter(new(), t)) = t
-    -   leave(enter(new(), t)) = new()
+    -   head(enter(new(),t)) = t
+    -   leave(enter(new(),t)) = new()
     -   leave(new()) = new()
-    -   head(enter(enter(q, s), t)) = head(enter(q, s))
-    -   leave(enter(enter(q, s), t)) = enter(leave(enter(q, s)), t)
+    -   head(enter(enter(q,s),t)) = head(enter(q,s))
+    -   leave(enter(enter(q,s),t)) = enter(leave(enter(q,s)),t)
 
 Binärbaum
 
@@ -225,8 +225,8 @@ Binärbaum
     -   root: BinTree(T) → T
     -   empty: BinTree(T) → bool
 -   axioms
-    -   left(bin(x, t, y)) = x
-    -   right(bin(x, t, y)) = y
-    -   root(bin(x, t, y)) = t
+    -   left(bin(x,t,y)) = x
+    -   right(bin(x,t,y)) = y
+    -   root(bin(x,t,y)) = t
     -   empty(new()) = true
-    -   empty(bin(x, t, y))) = false
+    -   empty(bin(x,t,y))) = false
